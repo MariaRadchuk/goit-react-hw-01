@@ -1,0 +1,37 @@
+.profileContainer {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.profileInfo {
+  text-align: center;
+}
+
+.profileInfo img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profileStats {
+  list-style-type: none;
+  padding: 0;
+}
+
+.profileStats li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.profileStats li span:first-child {
+  font-weight: bold;
+}
+
+.profileStats li span:last-child {
+  color: #777;
+}
