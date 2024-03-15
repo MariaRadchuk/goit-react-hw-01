@@ -1,27 +1,30 @@
-
 import React from 'react';
+import styles from './Profile.module.css'; // Імпорт CSS модулю
 
 const Profile = ({ name, tag, location, image, stats }) => {
+  const { followers, views, likes } = stats;
+
   return (
-    <div>
-      <div>
-        <img src={image} alt="User avatar" />
-        <p>{name}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
+    <div className={styles.profile}> {/* Використання класу з CSS модулю */}
+      <div className={styles.description}>
+        <img src={image} alt={`${name}'s Avatar`} className={styles.avatar} /> {/* Використання name для атрибуту alt */}
+        <p className={styles.name}>{name}</p>
+        <p className={styles.tag}>@{tag}</p>
+        <p className={styles.location}>{location}</p>
       </div>
-      <ul>
+
+      <ul className={styles.stats}>
         <li>
-          <span>Followers</span>
-          <span>{stats.followers}</span>
+          <span className={styles.label}>Followers</span>
+          <span className={styles.quantity}>{followers}</span>
         </li>
         <li>
-          <span>Views</span>
-          <span>{stats.views}</span>
+          <span className={styles.label}>Views</span>
+          <span className={styles.quantity}>{views}</span>
         </li>
         <li>
-          <span>Likes</span>
-          <span>{stats.likes}</span>
+          <span className={styles.label}>Likes</span>
+          <span className={styles.quantity}>{likes}</span>
         </li>
       </ul>
     </div>
